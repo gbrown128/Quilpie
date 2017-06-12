@@ -8,15 +8,27 @@
   <sprites name="sprites">
     <sprites name="Intro Sprites">
       <sprite>sprites\Spr_BlackScreen</sprite>
+      <sprites name="Intro Text">
+        <sprite>sprites\spr_IntroText1</sprite>
+        <sprite>sprites\spr_IntroText2</sprite>
+        <sprite>sprites\spr_IntroText3</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <objects name="Intro Objects">
       <object>objects\Obj_FadeToBlack</object>
+      <object>objects\Obj_IntroText</object>
     </objects>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\Intro_Timeline</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\rm_intro</room>
   </rooms>
