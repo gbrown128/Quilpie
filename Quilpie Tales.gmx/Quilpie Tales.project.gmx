@@ -5,11 +5,21 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="Intro Sprites">
+      <sprite>sprites\Spr_BlackScreen</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <objects name="objects"/>
-  <rooms name="rooms"/>
+  <objects name="objects">
+    <objects name="Intro Objects">
+      <object>objects\Obj_FadeToBlack</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_intro</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
