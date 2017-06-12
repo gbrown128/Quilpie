@@ -5,11 +5,31 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprite>sprites\man_sprite</sprite>
+    <sprite>sprites\hello</sprite>
+    <sprite>sprites\opal_hit</sprite>
+    <sprite>sprites\bird_sprite</sprite>
+    <sprite>sprites\sprite4</sprite>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\mine_bg</background>
+  </backgrounds>
   <paths name="paths"/>
-  <objects name="objects"/>
-  <rooms name="rooms"/>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
+  <objects name="objects">
+    <object>objects\man</object>
+    <object>objects\hello_world</object>
+    <object>objects\opal</object>
+    <object>objects\bird</object>
+    <object>objects\opal_counter</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\mine</room>
+    <room>rooms\room1</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
