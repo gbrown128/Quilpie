@@ -5,11 +5,25 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprite>sprites\sp_OWGround_tmp</sprite>
+    <sprite>sprites\sp_Char_tmp</sprite>
+    <sprite>sprites\sp_Char2_tmp</sprite>
+    <sprite>sprites\sprite3</sprite>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\bg_Overworld_tmp</background>
+  </backgrounds>
   <paths name="paths"/>
-  <objects name="objects"/>
-  <rooms name="rooms"/>
+  <scripts name="scripts"/>
+  <objects name="objects">
+    <object>objects\obj_OWGround_tmp</object>
+    <object>objects\obj_GameEnd_tmp</object>
+    <object>objects\obj_Char_tmp</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_Overworld1</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
