@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>stationaryFrameStart = 0;
+            <string>///Variable Initialization
+stationaryFrameStart = 0;
 stationaryFrameEnd = 2;
 rightFrameStart = 3;
 rightFrameEnd = 5;
@@ -35,7 +36,9 @@ isMoving = false;
 movDirection = 0;
 image_speed = 0;
 // No Movement (0), Right (1), Left(2), Down(3), Up(4)
-
+canInteract = false;
+movementAxisVal = 0;
+movementSpeed = 5;
 </string>
           </argument>
         </arguments>
@@ -58,7 +61,8 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>///Increasing Animation Frames
+//Alter the FrameStart and FrameEnd values in the "Create" action to increase/decrease the number of frames in the movement animation.
 switch (movDirection)
     {
     case 0:
@@ -131,6 +135,55 @@ switch (movDirection)
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Movement  
+    switch (movDirection)
+    {
+    case 0:
+        //Movement while stationary
+        background_hspeed[1] = 0; 
+        break;
+    case 1:
+        if (movementAxisVal &gt; -4800) {
+            //Right Direction Movement
+            background_hspeed[1] = -movementSpeed;
+            movementAxisVal -= movementSpeed;
+        }
+        else {
+            background_hspeed[1] = 0;
+        }
+        break;
+    case 2:
+    if (movementAxisVal &lt; 0) {
+            //Left Direction Movement
+            background_hspeed[1] = movementSpeed; //Scrolls the Background
+            movementAxisVal += movementSpeed;
+        }
+        else {
+            background_hspeed[1] = 0;
+        }
+        break;
+    };
+    
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="9" enumb="39">
       <action>
@@ -151,7 +204,6 @@ switch (movDirection)
             <kind>1</kind>
             <string>movDirection = 1;
 isMoving = true;
-
 </string>
           </argument>
         </arguments>
