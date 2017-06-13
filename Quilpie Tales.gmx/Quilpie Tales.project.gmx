@@ -23,8 +23,11 @@
   <objects name="objects">
     <objects name="Intro Objects">
       <object>objects\Obj_FadeToBlack</object>
-      <object>objects\Obj_IntroText</object>
+      <object>objects\Obj_IntroText1</object>
+      <object>objects\Obj_IntroText2</object>
+      <object>objects\Obj_IntroText3</object>
     </objects>
+    <object>objects\ExitOnEsc</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\Intro_Timeline</timeline>
