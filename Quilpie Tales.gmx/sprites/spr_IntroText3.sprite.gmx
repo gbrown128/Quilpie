@@ -2,15 +2,15 @@
 <sprite>
   <type>0</type>
   <xorig>960</xorig>
-  <yorigin>180</yorigin>
+  <yorigin>540</yorigin>
   <colkind>1</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>126</bbox_left>
-  <bbox_right>1812</bbox_right>
-  <bbox_top>93</bbox_top>
-  <bbox_bottom>278</bbox_bottom>
+  <bbox_left>19</bbox_left>
+  <bbox_right>1900</bbox_right>
+  <bbox_top>455</bbox_top>
+  <bbox_bottom>603</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -18,7 +18,7 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>1920</width>
-  <height>360</height>
+  <height>1080</height>
   <frames>
     <frame index="0">images\spr_IntroText3_0.png</frame>
   </frames>
