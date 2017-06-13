@@ -16,6 +16,7 @@
     <sprite>sprites\sp_BookStand</sprite>
     <sprite>sprites\sp_Bed</sprite>
     <sprite>sprites\sprite11</sprite>
+    <sprite>sprites\sprite10</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_Overworld_tmp</background>
