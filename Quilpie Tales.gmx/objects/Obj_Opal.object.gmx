@@ -25,10 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>mined = false;
+            <string>/// Init Variables
+mined = false;
 startPos = x;
 startAngela = image_angle;
 rockWobble = false;
+timesClicked = 0;
+bounceCount = 0;
 </string>
           </argument>
         </arguments>
@@ -75,7 +78,9 @@ rockWobble = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>rockWobble = false;
+            <string>/// Stop rock wobbling for this click trigger.
+rockWobble = false;
+timesClicked++;
 </string>
           </argument>
         </arguments>
@@ -98,16 +103,56 @@ rockWobble = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (rockWobble == true){
+            <string>/// Wobble the rock or make it drop.
+
+// If wobbling.
+if (rockWobble == true){
     if((mined == false) &amp;&amp; (alarm[0] != 0)){
         x = x + random_range(-2, 2);
         image_angle = image_angle + random_range(-1,1);
     }
 }
-else{
+// Undo the wobble action until 3 clicks.
+else if(!rockWobble &amp;&amp; (timesClicked &lt;= 2)){
         x = startPos;
         image_angle = 0;
 }
+
+// 3 clicks -&gt; drop to the floor.
+if (timesClicked &gt;= 3){
+    
+    // Stop if 
+    if (bounceCount == 3){
+        vspeed = 0;
+        hspeed = 0;
+        y = room_height - 144;
+    }
+    else{
+        // Apply gravity.
+        vspeed += 0.5;
+    }
+    
+    // If the rock hits the screen edge.
+    if ((y &gt; (room_height - 144)) &amp;&amp; bounceCount !=3){
+        // Throw it upwards.
+        vspeed *= -0.3;
+        // Ensure we're outside the box.
+        y = room_height - 144;
+        if(bounceCount == 0){
+            hspeed = random_range(0.75*vspeed, 1.25*vspeed)
+            if (image_angle &lt; 0.00) // if rock is leaning left bounce left
+            {
+                hspeed *= -1;
+            };
+            
+        }
+        //image_angle = -15;
+        hspeed *= 0.5;
+        // Count this bounce.
+        bounceCount++;
+    }
+}
+
 
 </string>
           </argument>
@@ -131,8 +176,11 @@ else{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = 15;
-rockWobble = true;
+            <string>/// Set the rock wobbling.
+if((timesClicked &lt; 3) &amp;&amp; !rockWobble){
+    alarm[0] = 15;
+    rockWobble = true;
+}
 
 </string>
           </argument>
@@ -142,17 +190,18 @@ rockWobble = true;
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
-  <PhysicsObjectShape>0</PhysicsObjectShape>
+  <PhysicsObjectShape>2</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
-  <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
+  <PhysicsObjectRestitution>0.300000011920929</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
   <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
   <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
-  <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
+  <PhysicsObjectFriction>0.5</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>200,100</point>
-    <point>200,200</point>
+    <point>0,0</point>
+    <point>384,0</point>
+    <point>384,288</point>
   </PhysicsShapePoints>
 </object>

@@ -127,13 +127,13 @@ image_speed = 0;
         textRead = 1;   // Set TextRead to 1.
     }
 }
-
-if startMoving{
-    y += 4;
-}
 if y &gt;= 980{
     startMoving = false;
 }
+if startMoving{
+    y += 4;
+}
+
 </string>
           </argument>
         </arguments>
