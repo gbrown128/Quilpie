@@ -1321,7 +1321,7 @@
     <instance objName="obj_OWGround_tmp" x="1600" y="1024" name="inst_53B248D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_OWGround_tmp" x="0" y="1056" name="inst_823FFF69" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_GameEnd_tmp" x="0" y="0" name="inst_275FD78D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Char_tmp" x="128" y="448" name="inst_478A3960" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Char_tmp" x="160" y="448" name="inst_56EC40F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
