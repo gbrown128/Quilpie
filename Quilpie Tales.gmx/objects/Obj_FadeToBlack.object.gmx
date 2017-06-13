@@ -126,6 +126,7 @@ text2Playing = false;
 text3Playing = false;
 window_set_cursor(cr_none);
 opalFadedIn = false;
+fadeBegin = false;
 </string>
           </argument>
         </arguments>
@@ -202,7 +203,7 @@ opalFadedIn = false;
             <kind>1</kind>
             <string>//text3Playing = false;
 window_set_cursor(cr_drag);
-opalFadedIn = true;
+fadeBegin = true;
 </string>
           </argument>
         </arguments>
@@ -283,6 +284,7 @@ opalFadedIn = true;
             <kind>1</kind>
             <string>text2Playing = false;
 text3Playing = true;
+alarm[3] = 105;
 </string>
           </argument>
         </arguments>
@@ -408,7 +410,7 @@ text2Playing = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if opalFadedIn = true {
+            <string>if fadeBegin = true {
     sparkles = (sparkles + 1) % 2
     if(sparkles == 0){
         //effect_create_above (ef_flare, random_range(810, 1110), random_range(390, 690), random_range(0, 2), c_white);
@@ -417,14 +419,24 @@ text2Playing = true;
         radius = random_range(0, 200);
         angle = random_range(-3.14125, 3.14125);
         
-        sparkle_x = 960+2*radius*sin(angle);
-        sparkle_y = 540+radius*cos(angle);
+        //sparkle_x = 960+2*radius*sin(angle);
+        sparkle_x = Obj_Opal.x+2*radius*sin(angle);
+        //sparkle_y = 540+radius*cos(angle);
+        sparkle_y = Obj_Opal.y+radius*cos(angle);
         
         show_debug_message(string(sparkle_x) + "," + string(sparkle_y));
         
         effect_create_above(ef_flare, sparkle_x, sparkle_y, random_range(0, 2), c_white);
     }
+    if (Obj_Opal.stopped == true){ //If the rock has stopped bouncing/moving
+        //alarm[4] = 30;
+        image_alpha -= 0.1;
+        Obj_Opal.image_alpha -= 0.1;
+    }
 }
+
+
+
 </string>
           </argument>
         </arguments>

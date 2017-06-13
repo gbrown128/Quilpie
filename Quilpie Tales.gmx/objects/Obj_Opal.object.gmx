@@ -32,6 +32,7 @@ startAngela = image_angle;
 rockWobble = false;
 timesClicked = 0;
 bounceCount = 0;
+stopped = false;
 </string>
           </argument>
         </arguments>
@@ -56,6 +57,30 @@ bounceCount = 0;
           </argument>
           <argument>
             <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>543</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sprite_color</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>13</kind>
+            <string>16777215</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
             <string>0</string>
           </argument>
         </arguments>
@@ -126,6 +151,7 @@ if (timesClicked &gt;= 3){
         vspeed = 0;
         hspeed = 0;
         y = room_height - 144;
+        stopped = true;
     }
     else{
         // Apply gravity.
@@ -153,7 +179,41 @@ if (timesClicked &gt;= 3){
     }
 }
 
+//Fade text out
+if (timesClicked == 3){
+    Obj_IntroText3.image_alpha -= 0.01;
+}
 
+
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Opal Fading in
+if (Obj_FadeToBlack.opalFadedIn == false){
+    image_alpha += 0.01;
+    if (image_alpha == 1.00){
+        Obj_FadeToBlack.opalFadedIn = true;
+    }
+}
 </string>
           </argument>
         </arguments>

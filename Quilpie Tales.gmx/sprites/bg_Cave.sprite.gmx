@@ -20,6 +20,6 @@
   <width>1920</width>
   <height>1080</height>
   <frames>
-    <frame index="0">images\Spr_BlackScreen_0.png</frame>
+    <frame index="0">images\bg_Cave_0.png</frame>
   </frames>
 </sprite>
