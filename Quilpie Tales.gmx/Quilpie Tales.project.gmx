@@ -48,6 +48,7 @@
       <object>objects\Obj_IntroText2</object>
       <object>objects\Obj_IntroText3</object>
       <object>objects\Obj_Opal</object>
+      <object>objects\IDONOTHINGOPAL</object>
     </objects>
     <object>objects\obj_OWGround_tmp</object>
     <object>objects\obj_GameEnd</object>
@@ -67,6 +68,7 @@
     <room>rooms\rm_Overworld1</room>
     <room>rooms\rm_Secret</room>
     <room>rooms\rm_intro</room>
+    <room>rooms\rm_TitleScreen</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
