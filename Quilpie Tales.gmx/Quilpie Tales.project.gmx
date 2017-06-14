@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound0_ES_Cave_Atmosphere___SFX_Producer</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Intro Sprites">
       <sprite>sprites\Spr_BlackScreen</sprite>
