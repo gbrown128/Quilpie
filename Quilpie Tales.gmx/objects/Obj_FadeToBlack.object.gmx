@@ -411,9 +411,9 @@ text2Playing = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if fadeBegin = true {
+            <string>if fadeBegin = true { // When the opal spawns.
     sparkles = (sparkles + 1) % 2
-    if(sparkles == 0){
+    if((sparkles == 0) &amp;&amp; (Obj_Opal.stopped != true)){
         //effect_create_above (ef_flare, random_range(810, 1110), random_range(390, 690), random_range(0, 2), c_white);
     
         //big poopy butts
@@ -425,18 +425,18 @@ text2Playing = true;
         //sparkle_y = 540+radius*cos(angle);
         sparkle_y = Obj_Opal.y+radius*cos(angle);
         
-        show_debug_message(string(sparkle_x) + "," + string(sparkle_y));
-        
         effect_create_above(ef_flare, sparkle_x, sparkle_y, random_range(0, 2), c_white);
     }
-    if (Obj_Opal.stopped == true){ //If the rock has stopped bouncing/moving
+    if ((Obj_Opal.stopped == true)&amp;&amp; (image_alpha != 0.00)){ //If the rock has stopped bouncing/moving
         //alarm[4] = 30;
         image_alpha -= 0.05;
         Obj_Opal.image_alpha -= 0.05;
-        if (image_alpha == 0.00){
-            screenFaded = true;
+        Obj_IntroText3.image_alpha -= 0.05;
+        if ((Obj_Opal.stopped == true)&amp;&amp; (image_alpha == 0.00)){
+            instance_create(0,0, Obj_Transition);
         }
     }
+    
 }
 
 
@@ -444,76 +444,6 @@ text2Playing = true;
 </string>
           </argument>
         </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>screenFaded</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>true</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>222</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_next_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="10" enumb="32">
