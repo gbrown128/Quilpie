@@ -5,11 +5,40 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprite>sprites\sp_OWGround_tmp</sprite>
+    <sprite>sprites\sp_Char_tmp</sprite>
+    <sprite>sprites\sp_ButtonF_tmp</sprite>
+    <sprite>sprites\sp_sign_tmp</sprite>
+    <sprite>sprites\sp_OWBackground</sprite>
+    <sprite>sprites\sp_Mineshaft</sprite>
+    <sprite>sprites\sp_PopSign</sprite>
+    <sprite>sprites\sp_BookStand</sprite>
+    <sprite>sprites\sp_Bed</sprite>
+    <sprite>sprites\sprite11</sprite>
+    <sprite>sprites\sprite10</sprite>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\bg_Overworld_tmp</background>
+    <background>background\bg_Secret</background>
+    <background>background\bg_Overworld</background>
+  </backgrounds>
   <paths name="paths"/>
-  <objects name="objects"/>
-  <rooms name="rooms"/>
+  <objects name="objects">
+    <object>objects\obj_OWGround_tmp</object>
+    <object>objects\obj_GameEnd</object>
+    <object>objects\obj_Char</object>
+    <object>objects\obj_ButtonF</object>
+    <object>objects\obj_sign_tmp</object>
+    <object>objects\obj_Mineshaft</object>
+    <object>objects\obj_PopSign</object>
+    <object>objects\obj_BookStand</object>
+    <object>objects\obj_Bed</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_Overworld1</room>
+    <room>rooms\rm_Secret</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
