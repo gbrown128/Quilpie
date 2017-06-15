@@ -8,6 +8,29 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instMineshaft = noone;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -48,10 +71,10 @@ x = (obj_Char.movementAxisVal + 810)
           <argument>
             <kind>1</kind>
             <string>///Collision with the character
-var inst;
-inst = instance_position(960,900,obj_Mineshaft);
-if (inst != noone) {
-    instance_create((obj_Char.x + 64),(obj_Char.y - 42),obj_ButtonF);
+instMineshaft = instance_position(960,900,obj_Mineshaft);
+if (instMineshaft != noone) {
+    instance_create((obj_Char.x + 32),(obj_Char.y - 42),obj_ButtonF);
+    obj_Char.currentObject = 1;
 }
 </string>
           </argument>

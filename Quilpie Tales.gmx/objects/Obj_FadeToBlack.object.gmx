@@ -206,16 +206,50 @@ screenFaded = false;
 window_set_cursor(cr_drag);
 fadeBegin = true;
 
+
+
 if (instance_number(Obj_Opal) &gt;= 1){
     
 }
 else { 
     instance_create(960, 540, Obj_Opal);
 }
+
 </string>
           </argument>
         </arguments>
       </action>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </event>
     <event eventtype="2" enumb="2">
       <action>
@@ -408,10 +442,16 @@ text2Playing = true;
     }
     if ((Obj_Opal.stopped == true)&amp;&amp; (image_alpha != 0.00)){ //If the rock has stopped bouncing/moving
         //alarm[4] = 30;
+
+       image_alpha -= 0.01;
+        Obj_Opal.image_alpha -= 0.01;
+        Obj_IntroText3.image_alpha -= 0.01;
+
         image_alpha -= 0.05;
         Obj_Opal.image_alpha -= 0.05;
         Obj_IntroText3.image_alpha -= 0.05;
-        if ((Obj_Opal.stopped == true)&amp;&amp; (image_alpha == 0.00)){
+
+       if ((Obj_Opal.stopped == true)&amp;&amp; (image_alpha == 0.00)){
             instance_create(0,0, Obj_Transition);
         }
     }
@@ -460,7 +500,10 @@ if text2Playing = true{
 }
 if text3Playing = true{
     Obj_IntroText3.y = 981;
+
+
     Obj_IntroText3.image_alpha = 1;
+
     alarm[3] = 1;
 }
 </string>
