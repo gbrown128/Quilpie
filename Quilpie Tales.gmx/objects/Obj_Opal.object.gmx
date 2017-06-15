@@ -33,6 +33,7 @@ rockWobble = false;
 timesClicked = 0;
 bounceCount = 0;
 stopped = false;
+soundPlayed = false; //If the Falling sound has been played set to true
 </string>
           </argument>
         </arguments>
@@ -157,9 +158,14 @@ if (timesClicked &gt;= 3){
         // Apply gravity.
         vspeed += 0.5;
     }
+    if (soundPlayed == false){
+        audio_play_sound(OpalFall,1,false);
+        soundPlayed = true;
+    }
     
     // If the rock hits the screen edge.
     if ((y &gt; (room_height - 144)) &amp;&amp; bounceCount !=3){
+        audio_play_sound(OpalBounce,1,false);
         // Throw it upwards.
         vspeed *= -0.3;
         // Ensure we're outside the box.
@@ -240,6 +246,7 @@ if (Obj_FadeToBlack.opalFadedIn == false){
 if((timesClicked &lt; 3) &amp;&amp; !rockWobble){
     alarm[0] = 15;
     rockWobble = true;
+    audio_play_sound(OpalClick,1,false);
 }
 
 </string>
