@@ -205,35 +205,14 @@ screenFaded = false;
             <string>//text3Playing = false;
 window_set_cursor(cr_drag);
 fadeBegin = true;
+
+if (instance_number(Obj_Opal) &gt;= 1){
+    
+}
+else { 
+    instance_create(960, 540, Obj_Opal);
+}
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>Obj_Opal</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>960</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>540</string>
           </argument>
         </arguments>
       </action>
@@ -481,6 +460,7 @@ if text2Playing = true{
 }
 if text3Playing = true{
     Obj_IntroText3.y = 981;
+    Obj_IntroText3.image_alpha = 1;
     alarm[3] = 1;
 }
 </string>

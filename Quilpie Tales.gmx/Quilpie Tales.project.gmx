@@ -73,8 +73,8 @@
     <timeline>timelines\Intro_Timeline</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\rm_Overworld1</room>
     <room>rooms\rm_intro</room>
+    <room>rooms\rm_Overworld1</room>
     <room>rooms\rm_TitleScreen</room>
     <room>rooms\rm_Secret</room>
   </rooms>
