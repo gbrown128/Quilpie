@@ -3,13 +3,8 @@
   <caption></caption>
   <width>1920</width>
   <height>1080</height>
-
-
-
-
   <vsnap>1</vsnap>
   <hsnap>1</hsnap>
-
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
@@ -58,10 +53,7 @@
   <instances>
     <instance objName="ExitOnEsc" x="64" y="96" name="inst_17624111" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Obj_FadeToBlack" x="0" y="0" name="inst_B6C29552" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-
     <instance objName="obj_CharUncon" x="897" y="940" name="inst_7B71E516" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-
-
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

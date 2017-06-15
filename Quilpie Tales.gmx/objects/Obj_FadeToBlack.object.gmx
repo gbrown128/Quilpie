@@ -219,37 +219,6 @@ else {
           </argument>
         </arguments>
       </action>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </event>
     <event eventtype="2" enumb="2">
       <action>
@@ -447,9 +416,6 @@ text2Playing = true;
         Obj_Opal.image_alpha -= 0.01;
         Obj_IntroText3.image_alpha -= 0.01;
 
-        image_alpha -= 0.05;
-        Obj_Opal.image_alpha -= 0.05;
-        Obj_IntroText3.image_alpha -= 0.05;
 
        if ((Obj_Opal.stopped == true)&amp;&amp; (image_alpha == 0.00)){
             instance_create(0,0, Obj_Transition);
