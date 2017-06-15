@@ -6,6 +6,13 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\sound0_ES_Cave_Atmosphere___SFX_Producer</sound>
+    <sound>sound\PlayerFall</sound>
+    <sound>sound\OpalFall</sound>
+    <sound>sound\OpalClick</sound>
+    <sound>sound\OpalBounce</sound>
+    <sound>sound\OpalMining</sound>
+    <sound>sound\GetItem</sound>
+    <sound>sound\OverworldTheme</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Intro Sprites">
@@ -16,7 +23,7 @@
         <sprite>sprites\spr_IntroText3</sprite>
       </sprites>
       <sprite>sprites\sp_OWGround_tmp</sprite>
-      <sprite>sprites\sp_Char_tmp</sprite>
+      <sprite>sprites\sp_Char</sprite>
       <sprite>sprites\sp_ButtonF_tmp</sprite>
       <sprite>sprites\sp_sign_tmp</sprite>
       <sprite>sprites\sp_OWBackground</sprite>
@@ -32,49 +39,123 @@
     <sprites name="IntroCave">
       <sprite>sprites\bg_Cave</sprite>
     </sprites>
+    <sprite>sprites\sp_TextBox</sprite>
+    <sprite>sprites\sp_TextBoxLarge</sprite>
+    <sprite>sprites\sp_SerenaLargeBox</sprite>
+    <sprite>sprites\sp_Serena</sprite>
+    <sprite>sprites\sprite22</sprite>
+    <sprite>sprites\sp_CharUncon</sprite>
+    <sprite>sprites\welcomeLetter</sprite>
+    <sprite>sprites\sp_LetterBox</sprite>
+    <sprite>sprites\sp_bird</sprite>
+    <sprite>sprites\sp_drill</sprite>
+    <sprite>sprites\sp_laser</sprite>
+    <sprite>sprites\sp_shop</sprite>
+    <sprite>sprites\spr_beetle</sprite>
+    <sprite>sprites\spr_beetle_player</sprite>
+    <sprite>sprites\spr_beetle_player_mad</sprite>
+    <sprite>sprites\sp_Shops</sprite>
+    <sprite>sprites\sp_opal_normal</sprite>
+    <sprite>sprites\sp_opal_light</sprite>
+    <sprite>sprites\sp_shelf</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\bg_Overworld_tmp</background>
     <background>background\bg_Secret</background>
-    <background>background\bg_Overworld</background>
     <background>background\bg_CaveDay</background>
+    <backgrounds name="Old">
+      <background>background\bg_OverworldFront</background>
+      <background>background\bg_OverworldBack</background>
+      <background>background\bg_Overworld_tmp</background>
+    </backgrounds>
+    <background>background\bg_PlayerBase</background>
+    <background>background\bg_Overworld</background>
+    <background>background\bg_ForeGround</background>
+    <background>background\bg_Clouds</background>
+    <background>background\bg_Mountains</background>
+    <background>background\bg_Skylines</background>
+    <background>background\background11</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\script0.gml</script>
+    <script>scripts\script3.gml</script>
+    <script>scripts\scr_init_game.gml</script>
+    <script>scripts\scr_shop_prices.gml</script>
+  </scripts>
   <fonts name="fonts">
+    <font>fonts\font_score</font>
+    <font>fonts\font_BookStand</font>
+    <font>fonts\font_Serena</font>
     <font>fonts\font0</font>
   </fonts>
   <objects name="objects">
-    <objects name="Intro Objects">
-      <object>objects\Obj_FadeToBlack</object>
-      <object>objects\Obj_IntroText1</object>
-      <object>objects\Obj_IntroText2</object>
-      <object>objects\Obj_IntroText3</object>
-      <object>objects\Obj_Opal</object>
-      <object>objects\IDONOTHINGOPAL</object>
-      <object>objects\Obj_Transition</object>
-    </objects>
-    <object>objects\obj_OWGround_tmp</object>
-    <object>objects\obj_GameEnd</object>
-    <object>objects\obj_Char</object>
-    <object>objects\obj_ButtonF</object>
-    <object>objects\obj_sign_tmp</object>
-    <object>objects\obj_Mineshaft</object>
-    <object>objects\obj_PopSign</object>
+    <object>objects\Obj_FadeToBlack</object>
+    <object>objects\obj_intro_skip</object>
+    <object>objects\obj_opal_counter</object>
+    <object>objects\obj_Serena</object>
+    <object>objects\obj_SerenaLargeBox</object>
+    <object>objects\obj_TextBed</object>
+    <object>objects\obj_TextBookStand</object>
+    <object>objects\obj_TextBoxLarge</object>
+    <object>objects\obj_TextMineshaft</object>
+    <object>objects\obj_TextPopSign</object>
+    <object>objects\obj_TextSerena</object>
+    <object>objects\mine_beetle</object>
+    <object>objects\obj_beetle</object>
+    <object>objects\obj_bevim</object>
+    <object>objects\Obj_IntroText1</object>
+    <object>objects\char_Cave</object>
+    <object>objects\Obj_Opal</object>
     <object>objects\obj_BookStand</object>
-    <object>objects\obj_Bed</object>
+    <object>objects\obj_Char</object>
+    <object>objects\Obj_IntroText2</object>
+    <object>objects\Obj_IntroText3</object>
+    <object>objects\obj_bird_shop</object>
+    <object>objects\obj_drill_shop</object>
+    <object>objects\obj_laser_shop</object>
     <object>objects\ExitOnEsc</object>
-    <objects name="Title Screen">
-      <object>objects\IntroMovie</object>
-    </objects>
+    <object>objects\IDONOTHINGOPAL</object>
+    <object>objects\IntroMovie</object>
+    <object>objects\obj_Bed</object>
+    <object>objects\obj_bird</object>
+    <object>objects\obj_ButtonF</object>
+    <object>objects\obj_CharUncon</object>
+    <object>objects\obj_drill</object>
+    <object>objects\obj_GameEnd</object>
+    <object>objects\obj_laser</object>
+    <object>objects\obj_letter1</object>
+    <object>objects\obj_LetterBox</object>
+    <object>objects\obj_Mineshaft</object>
+    <object>objects\Obj_PlayerFallPlay</object>
+    <object>objects\obj_PopSign</object>
+    <object>objects\obj_TextBox</object>
+    <object>objects\Obj_Transition</object>
+    <object>objects\obj_TransitionIn</object>
+    <object>objects\test_text_box</object>
+    <object>objects\Obj_Opal_new</object>
+    <object>objects\Obj_PlayerFallPlay_new</object>
+    <object>objects\IDONOTHINGOPAL_new</object>
+    <object>objects\background</object>
+    <object>objects\Obj_Floor</object>
+    <object>objects\obj_letter0</object>
+    <object>objects\obj_MailBox</object>
+    <object>objects\obj_OWBackground</object>
+    <object>objects\obj_OWGround_tmp</object>
+    <object>objects\obj_sign_tmp</object>
+    <object>objects\object19</object>
+    <object>objects\obj_game_opal</object>
+    <object>objects\obj_drill_shelf</object>
+    <object>objects\obj_laser_shelf</object>
   </objects>
-  <timelines name="timelines">
-    <timeline>timelines\Intro_Timeline</timeline>
-  </timelines>
   <rooms name="rooms">
+    <room>rooms\IntroFallRoom</room>
     <room>rooms\rm_intro</room>
-    <room>rooms\rm_TitleScreen</room>
     <room>rooms\rm_Overworld1</room>
+    <room>rooms\beetleworld_game</room>
+    <room>rooms\rm_Cave</room>
     <room>rooms\rm_Secret</room>
+    <room>rooms\rm_TitleScreen</room>
+    <room>rooms\prank_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
