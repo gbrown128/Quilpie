@@ -37,8 +37,9 @@
     <sprite>sprites\sp_SerenaLargeBox</sprite>
     <sprite>sprites\sp_Serena</sprite>
     <sprite>sprites\sprite22</sprite>
-    <sprite>sprites\sprite23</sprite>
+    <sprite>sprites\sp_CharUncon</sprite>
     <sprite>sprites\welcomeLetter</sprite>
+    <sprite>sprites\sp_LetterBox</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_Secret</background>
@@ -46,12 +47,14 @@
     <backgrounds name="Old">
       <background>background\bg_OverworldFront</background>
       <background>background\bg_OverworldBack</background>
-      <background>background\bg_Overworld_old</background>
       <background>background\bg_Overworld_tmp</background>
     </backgrounds>
     <background>background\bg_PlayerBase</background>
     <background>background\bg_Overworld</background>
-    <background>background\bg_CaveDay_old</background>
+    <background>background\bg_ForeGround</background>
+    <background>background\bg_Clouds</background>
+    <background>background\bg_Mountains</background>
+    <background>background\bg_Skylines</background>
   </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
@@ -93,6 +96,7 @@
     <object>objects\obj_Serena</object>
     <object>objects\obj_CharUncon</object>
     <object>objects\obj_letter1</object>
+    <object>objects\obj_LetterBox</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\Intro_Timeline</timeline>

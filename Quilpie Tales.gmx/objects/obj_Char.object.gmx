@@ -158,36 +158,46 @@ switch (movDirection)
     {
     case 0:
         //Movement while stationary
+        background_hspeed[0] = 0;
         background_hspeed[1] = 0; 
         background_hspeed[2] = 0;
         background_hspeed[3] = 0;
+        background_hspeed[4] = 0;
         break;
     case 1:
         if (movementAxisVal &gt; -4780) {
             //Right Direction Movement
-            background_hspeed[1] = -movementSpeed;
-                    background_hspeed[2] = (-movementSpeed/2);
-        background_hspeed[3] = -movementSpeed;
+            background_hspeed[0] = (-movementSpeed/5);
+            background_hspeed[1] = (-movementSpeed/3);
+            background_hspeed[2] = (-movementSpeed/2);
+            background_hspeed[3] = -movementSpeed;
+            background_hspeed[4] = -movementSpeed;
             movementAxisVal -= movementSpeed;
         }
         else {
+            background_hspeed[0] = 0;
             background_hspeed[1] = 0;
-                    background_hspeed[2] = 0;
-        background_hspeed[3] = 0;
+            background_hspeed[2] = 0;
+            background_hspeed[3] = 0;
+            background_hspeed[4] = 0;
         }
         break;
     case 2:
     if (movementAxisVal &lt; 0) {
             //Left Direction Movement
-            background_hspeed[1] = movementSpeed; //Scrolls the Background
-                    background_hspeed[2] = movementSpeed/2;
-        background_hspeed[3] = movementSpeed;
+            background_hspeed[0] = (movementSpeed/5);
+            background_hspeed[1] = (movementSpeed/3); //Scrolls the Background
+            background_hspeed[2] = (movementSpeed/2);
+            background_hspeed[3] = movementSpeed;
+            background_hspeed[4] = movementSpeed;
             movementAxisVal += movementSpeed;
         }
         else {
+            background_hspeed[0] = 0;
             background_hspeed[1] = 0;
-                    background_hspeed[2] = 0;
-        background_hspeed[3] = 0;
+            background_hspeed[2] = 0;
+            background_hspeed[3] = 0;
+            background_hspeed[4] = 0;
         }
         break;
     };
@@ -308,12 +318,15 @@ movDirection = 2;
         room_goto(rm_Secret);
         break;
     case 2: //Shop
+    //Purchase Bird Code
+    
         break;
     case 3: //Population Sign
         instance_create(64,64,obj_TextBox);
         instance_create(128,128,obj_TextPopSign);
         break;
     case 4: //Mailbox
+        instance_create(0,0,obj_letter1);
         break;
     case 5: //Book
         instance_create(96,32,obj_TextBoxLarge);
@@ -325,6 +338,14 @@ movDirection = 2;
     case 7: //Bed
         instance_create(80,32,obj_TextBox);
         instance_create(0,0,obj_TextBed);
+        break;
+    case 8: //Shop: Drill
+    //Purchase Drill Code
+    
+        break;
+    case 9: //Shop: Laser
+    //Purchase Laser Code
+    
         break;
 }
 </string>
