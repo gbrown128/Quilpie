@@ -229,7 +229,8 @@ else { if (obj_PopSign.instPopSign != noone) { }
     else { if (obj_BookStand.instBookStand != noone) { } 
         else { if (obj_Bed.instBed != noone) { }
             else { if (obj_Serena.instSerena != noone) { }
-                else {
+                else { if (obj_LetterBox.instLetterBox != noone) { }
+                    else {
 currentObject = 0;
 with(obj_TextMineshaft) { instance_destroy(); }
 with(obj_TextPopSign) { instance_destroy(); }
@@ -239,7 +240,8 @@ with(obj_TextBox) { instance_destroy(); }
 with(obj_TextBoxLarge) { instance_destroy(); }
 with(obj_TextSerena) { instance_destroy(); }
 with(obj_SerenaLargeBox) { instance_destroy(); }
-}}}}}
+with(obj_letter1) { instance_destroy(); }
+}}}}}}
 </string>
           </argument>
         </arguments>
@@ -315,13 +317,14 @@ movDirection = 2;
     case 0: //Nothing
         break;
     case 1: //Mineshaft
-        room_goto(rm_Secret);
+        room_goto(rm_Cave);
         break;
     case 2: //Shop
     //Purchase Bird Code
     
         break;
     case 3: //Population Sign
+        draw_set_font(font0);
         instance_create(64,64,obj_TextBox);
         instance_create(128,128,obj_TextPopSign);
         break;
@@ -329,13 +332,16 @@ movDirection = 2;
         instance_create(0,0,obj_letter1);
         break;
     case 5: //Book
+        draw_set_font(font_BookStand);
         instance_create(96,32,obj_TextBoxLarge);
         break
     case 6: //Picture of Serena Williams
+        draw_set_font(font_Serena);
         instance_create(96,96,obj_SerenaLargeBox);
         instance_create(0,0,obj_TextSerena);
         break;
     case 7: //Bed
+        draw_set_font(font0);
         instance_create(80,32,obj_TextBox);
         instance_create(0,0,obj_TextBed);
         break;

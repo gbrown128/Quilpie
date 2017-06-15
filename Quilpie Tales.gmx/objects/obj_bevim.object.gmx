@@ -127,7 +127,7 @@ score = round(1.1*score);
         <arguments>
           <argument>
             <kind>5</kind>
-            <sprite>spr_beetle_player_mad</sprite>
+            <sprite>spr_beetle_player</sprite>
           </argument>
           <argument>
             <kind>0</kind>
@@ -179,17 +179,23 @@ score = round(1.1*score);
       </action>
       <action>
         <libid>1</libid>
-        <id>221</id>
+        <id>224</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>0</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_previous_room</functionname>
+        <functionname>action_another_room</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>11</kind>
+            <room>rm_Overworld1</room>
+          </argument>
+        </arguments>
       </action>
       <action>
         <libid>1</libid>
@@ -226,22 +232,22 @@ score = round(1.1*score);
             <string>hspeed = 0;
 vspeed = 0;
 
-if keyboard_check(ord('W')){
+if keyboard_check(vk_up){
     if(y &gt; 90){
         vspeed = -10;
     }
 }
-if keyboard_check(ord('S')){
+if keyboard_check(vk_down){
     if(y &lt; (1080-90)){
         vspeed = 10;
     }
 }
-if keyboard_check(ord('A')){
+if keyboard_check(vk_left){
     if(x &gt; 64){
         hspeed = -10;
     }
 }
-if keyboard_check(ord('D')){
+if keyboard_check(vk_right){
     if(x &lt; (1920-64)){
         hspeed = 10;
     }
@@ -272,7 +278,7 @@ if(hit){
         <arguments>
           <argument>
             <kind>5</kind>
-            <sprite>spr_beetle_player</sprite>
+            <sprite>spr_beetle_player_mad</sprite>
           </argument>
           <argument>
             <kind>0</kind>

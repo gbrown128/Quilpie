@@ -16,5 +16,5 @@ if(score == 0){
     global.laser_base_price = 1000;
     global.laser_ops = 25;
 
-    score = 1;
+    score = 1000;
 }

@@ -198,6 +198,29 @@ current_text = string_copy(my_text, 1, letters_out);
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///Set Font
+//font_add(Terminal, 12, false, false, 32, 128);
+draw_set_font(font0);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>/// Put the text on the display
 draw_text(128, 128, current_text);
 </string>
