@@ -32,6 +32,7 @@
     <sprites name="IntroCave">
       <sprite>sprites\bg_Cave</sprite>
     </sprites>
+    <sprite>sprites\welcomeLetter</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_Overworld_tmp</background>
@@ -66,14 +67,15 @@
     <objects name="Title Screen">
       <object>objects\IntroMovie</object>
     </objects>
+    <object>objects\obj_letter1</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\Intro_Timeline</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\rm_Overworld1</room>
     <room>rooms\rm_intro</room>
     <room>rooms\rm_TitleScreen</room>
-    <room>rooms\rm_Overworld1</room>
     <room>rooms\rm_Secret</room>
   </rooms>
   <help>
