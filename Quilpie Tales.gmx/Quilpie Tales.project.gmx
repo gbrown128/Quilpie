@@ -4,12 +4,78 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sounds name="sound">
+    <sound>sound\sound0_ES_Cave_Atmosphere___SFX_Producer</sound>
+  </sounds>
+  <sprites name="sprites">
+    <sprites name="Intro Sprites">
+      <sprite>sprites\Spr_BlackScreen</sprite>
+      <sprites name="Intro Text">
+        <sprite>sprites\spr_IntroText1</sprite>
+        <sprite>sprites\spr_IntroText2</sprite>
+        <sprite>sprites\spr_IntroText3</sprite>
+      </sprites>
+      <sprite>sprites\sp_OWGround_tmp</sprite>
+      <sprite>sprites\sp_Char_tmp</sprite>
+      <sprite>sprites\sp_ButtonF_tmp</sprite>
+      <sprite>sprites\sp_sign_tmp</sprite>
+      <sprite>sprites\sp_OWBackground</sprite>
+      <sprite>sprites\sp_Mineshaft</sprite>
+      <sprite>sprites\sp_PopSign</sprite>
+      <sprite>sprites\sp_BookStand</sprite>
+      <sprite>sprites\sp_Bed</sprite>
+      <sprite>sprites\sprite11</sprite>
+      <sprite>sprites\sprite10</sprite>
+      <sprite>sprites\spr_Opal</sprite>
+      <sprite>sprites\spr_IntroFloor</sprite>
+    </sprites>
+    <sprites name="IntroCave">
+      <sprite>sprites\bg_Cave</sprite>
+    </sprites>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\bg_Overworld_tmp</background>
+    <background>background\bg_Secret</background>
+    <background>background\bg_Overworld</background>
+    <background>background\bg_CaveDay</background>
+  </backgrounds>
   <paths name="paths"/>
-  <objects name="objects"/>
-  <rooms name="rooms"/>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
+  <objects name="objects">
+    <objects name="Intro Objects">
+      <object>objects\Obj_FadeToBlack</object>
+      <object>objects\Obj_IntroText1</object>
+      <object>objects\Obj_IntroText2</object>
+      <object>objects\Obj_IntroText3</object>
+      <object>objects\Obj_Opal</object>
+      <object>objects\IDONOTHINGOPAL</object>
+      <object>objects\Obj_Transition</object>
+    </objects>
+    <object>objects\obj_OWGround_tmp</object>
+    <object>objects\obj_GameEnd</object>
+    <object>objects\obj_Char</object>
+    <object>objects\obj_ButtonF</object>
+    <object>objects\obj_sign_tmp</object>
+    <object>objects\obj_Mineshaft</object>
+    <object>objects\obj_PopSign</object>
+    <object>objects\obj_BookStand</object>
+    <object>objects\obj_Bed</object>
+    <object>objects\ExitOnEsc</object>
+    <objects name="Title Screen">
+      <object>objects\IntroMovie</object>
+    </objects>
+  </objects>
+  <timelines name="timelines">
+    <timeline>timelines\Intro_Timeline</timeline>
+  </timelines>
+  <rooms name="rooms">
+    <room>rooms\rm_intro</room>
+    <room>rooms\rm_TitleScreen</room>
+    <room>rooms\rm_Overworld1</room>
+    <room>rooms\rm_Secret</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
