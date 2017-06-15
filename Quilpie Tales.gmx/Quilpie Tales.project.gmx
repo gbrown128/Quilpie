@@ -6,6 +6,13 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\sound0_ES_Cave_Atmosphere___SFX_Producer</sound>
+    <sound>sound\PlayerFall</sound>
+    <sound>sound\OpalFall</sound>
+    <sound>sound\OpalClick</sound>
+    <sound>sound\OpalBounce</sound>
+    <sound>sound\OpalMining</sound>
+    <sound>sound\GetItem</sound>
+    <sound>sound\OverworldTheme</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Intro Sprites">
@@ -46,12 +53,10 @@
     <backgrounds name="Old">
       <background>background\bg_OverworldFront</background>
       <background>background\bg_OverworldBack</background>
-      <background>background\bg_Overworld_old</background>
       <background>background\bg_Overworld_tmp</background>
     </backgrounds>
     <background>background\bg_PlayerBase</background>
     <background>background\bg_Overworld</background>
-    <background>background\bg_CaveDay_old</background>
   </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
@@ -69,6 +74,7 @@
       <object>objects\IDONOTHINGOPAL</object>
       <object>objects\Obj_Transition</object>
       <object>objects\obj_TransitionIn</object>
+      <object>objects\Obj_PlayerFallPlay</object>
     </objects>
     <object>objects\obj_GameEnd</object>
     <object>objects\obj_Char</object>
@@ -98,6 +104,7 @@
     <timeline>timelines\Intro_Timeline</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\IntroFallRoom</room>
     <room>rooms\rm_intro</room>
     <room>rooms\rm_Overworld1</room>
     <room>rooms\rm_Secret</room>
