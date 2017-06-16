@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>/// Set Cursor
-window_set_cursor(cr_default);
+window_set_cursor(sp_cursor);
+cursor_sprite = sp_cursor;
 </string>
           </argument>
         </arguments>

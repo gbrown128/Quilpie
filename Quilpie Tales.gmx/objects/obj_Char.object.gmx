@@ -247,7 +247,7 @@ with(obj_letter1) { instance_destroy(); }
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="39">
+    <event eventtype="9" enumb="68">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -271,7 +271,7 @@ isMoving = true;
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="37">
+    <event eventtype="9" enumb="65">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -359,7 +359,7 @@ movDirection = 2;
         </arguments>
       </action>
     </event>
-    <event eventtype="10" enumb="39">
+    <event eventtype="10" enumb="68">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -383,7 +383,7 @@ movDirection = 0;
         </arguments>
       </action>
     </event>
-    <event eventtype="10" enumb="37">
+    <event eventtype="10" enumb="65">
       <action>
         <libid>1</libid>
         <id>603</id>

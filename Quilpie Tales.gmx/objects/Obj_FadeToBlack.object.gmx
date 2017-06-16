@@ -203,7 +203,8 @@ screenFaded = false;
           <argument>
             <kind>1</kind>
             <string>//text3Playing = false;
-window_set_cursor(cr_drag);
+window_set_cursor(sp_cursor);
+cursor_sprite = sp_cursor;
 fadeBegin = true;
 
 

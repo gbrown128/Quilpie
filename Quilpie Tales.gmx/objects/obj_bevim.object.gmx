@@ -232,22 +232,22 @@ score = round(1.1*score);
             <string>hspeed = 0;
 vspeed = 0;
 
-if keyboard_check(vk_up){
+if keyboard_check(ord('W')){
     if(y &gt; 90){
         vspeed = -10;
     }
 }
-if keyboard_check(vk_down){
+if keyboard_check(ord('S')){
     if(y &lt; (1080-90)){
         vspeed = 10;
     }
 }
-if keyboard_check(vk_left){
+if keyboard_check(ord('A')){
     if(x &gt; 64){
         hspeed = -10;
     }
 }
-if keyboard_check(vk_right){
+if keyboard_check(ord('D')){
     if(x &lt; (1920-64)){
         hspeed = 10;
     }
