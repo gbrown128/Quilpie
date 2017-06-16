@@ -172,6 +172,10 @@ y = 720;
 if(score &gt;= global.bird_price){
     score -= global.bird_price;
     global.birds++;
+    if(global.birds == 1){
+        audio_play_sound(GetItem, 10, false);
+    }
+
 }
 script_execute(scr_shop_prices);
 </string>
@@ -276,7 +280,7 @@ script_execute(scr_shop_prices);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(x, y-50, string(global.bird_price));
+            <string>draw_text(x, y-20, string(global.bird_price));
 </string>
           </argument>
         </arguments>

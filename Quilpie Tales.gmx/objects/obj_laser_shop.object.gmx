@@ -172,6 +172,9 @@ y = 720;
 if(score &gt;= global.laser_price){
     score -= global.laser_price;
     global.lasers++;
+    if(global.lasers == 1){
+        audio_play_sound(GetItem, 10, false);
+    }
 }
 script_execute(scr_shop_prices);
 </string>
@@ -276,7 +279,7 @@ script_execute(scr_shop_prices);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(x, y-50, string(global.laser_price));
+            <string>draw_text(x, y-20, string(global.laser_price));
 </string>
           </argument>
         </arguments>

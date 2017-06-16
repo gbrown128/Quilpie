@@ -77,8 +77,6 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\script0.gml</script>
-    <script>scripts\script3.gml</script>
     <script>scripts\scr_init_game.gml</script>
     <script>scripts\scr_shop_prices.gml</script>
   </scripts>
@@ -146,6 +144,7 @@
     <object>objects\obj_game_opal</object>
     <object>objects\obj_drill_shelf</object>
     <object>objects\obj_laser_shelf</object>
+    <object>objects\obj_bg_music</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\IntroFallRoom</room>
