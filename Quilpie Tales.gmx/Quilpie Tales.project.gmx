@@ -58,6 +58,7 @@
     <sprite>sprites\sp_opal_normal</sprite>
     <sprite>sprites\sp_opal_light</sprite>
     <sprite>sprites\sp_shelf</sprite>
+    <sprite>sprites\sp_title</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_Secret</background>
@@ -145,6 +146,7 @@
     <object>objects\obj_drill_shelf</object>
     <object>objects\obj_laser_shelf</object>
     <object>objects\obj_bg_music</object>
+    <object>objects\obj_title</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\IntroFallRoom</room>

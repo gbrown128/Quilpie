@@ -55,6 +55,7 @@
     <instance objName="Obj_FadeToBlack" x="0" y="0" name="inst_B6C29552" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_CharUncon" x="897" y="940" name="inst_7B71E516" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_GameEnd" x="141" y="-109" name="inst_9E3F4786" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_title" x="945" y="633" name="inst_9EE0630A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

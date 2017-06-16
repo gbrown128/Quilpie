@@ -259,7 +259,7 @@ script_execute(scr_shop_prices);
           </argument>
           <argument>
             <kind>4</kind>
-            <string>0</string>
+            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -279,7 +279,9 @@ script_execute(scr_shop_prices);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(x, y-20, string(global.drill_price));
+            <string>if position_meeting(mouse_x,mouse_y,self){
+    draw_text(x+52, y-20, string(global.drill_price));
+}
 </string>
           </argument>
         </arguments>
